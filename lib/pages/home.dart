@@ -18,7 +18,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List categories = [];
 
   _onBottomNavTap(int index) {
-    Navigator.pushNamed(context, bottomNav[index]['route']);
+    Navigator.pushReplacementNamed(context, bottomNav[index]['route']);
   }
 
   @override
@@ -74,7 +74,7 @@ class CategoryGrid extends StatelessWidget {
           semanticContainer: true,
           clipBehavior: Clip.antiAliasWithSaveLayer,
           child: InkWell(
-            onTap: () => Navigator.pushReplacementNamed(context, '/products', arguments: {
+            onTap: () => Navigator.pushNamed(context, '/products', arguments: {
               'category': category
             }),
             child: Image.asset(
