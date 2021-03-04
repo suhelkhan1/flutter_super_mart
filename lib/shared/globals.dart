@@ -1,0 +1,3 @@
+library globals;
+
+List cartItems = [];
